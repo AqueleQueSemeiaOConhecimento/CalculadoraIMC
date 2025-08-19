@@ -15,7 +15,7 @@ export default function Input({ placeholder, keyboardType, onChangeText, value }
         <View style={styles.inputContainer}>
             <TextInput
                 placeholder={placeholder}
-                placeholderTextColor={"#fff"}
+                placeholderTextColor={isFocused ? "#ff0000" : "#fff"}
                 keyboardType={keyboardType}
                 value={value}
                 onFocus={() => setIsFocused(true)}
@@ -40,14 +40,15 @@ const styles = StyleSheet.create({
     },
     inputStyle: {
         width: 220,
-        height: 36,
+        height: 50,
         fontSize: 20,
+        fontWeight: 600,
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
         paddingHorizontal: 12,
         paddingVertical: 6,
-        borderWidth: 1,
+        borderWidth: 3,
         color: "#fff",
         borderRadius: 6,
         marginBottom: 10,
